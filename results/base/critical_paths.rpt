@@ -1,0 +1,386 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Nov 19 21:20:07 2026
+| Host         : DESKTOP-HODVNLJ running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 5 -nworst 1 -path_type full -input_pins -file C:/Users/THINKPAD/repos/ee6043-fazyrv-lowpower/results/base/critical_paths.rpt
+| Design       : top_pynqz2
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.009ns  (required time - arrival time)
+  Source:                 u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/D
+                            (rising edge-triggered cell SRL16E clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sysclk rise@8.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        7.984ns  (logic 1.696ns (21.244%)  route 6.288ns (78.756%))
+  Logic Levels:           10  (LUT3=2 LUT5=1 LUT6=7)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.122ns = ( 14.122 - 8.000 ) 
+    Source Clock Delay      (SCD):    6.431ns
+    Clock Pessimism Removal (CPR):    0.355ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.431     6.431    <hidden>
+    SLICE_X106Y96        FDRE                         0.000     6.431 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+    SLICE_X106Y96        FDRE (Prop_fdre_C_Q)         0.456     6.887 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/Q
+                         net (fo=1, routed)           0.582     7.469    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/p_0_in30_in_repN
+    SLICE_X109Y97                                                     f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/I0
+    SLICE_X109Y97        LUT3 (Prop_lut3_I0_O)        0.124     7.593 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/O
+                         net (fo=2, routed)           0.477     8.070    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23_n_0
+    SLICE_X110Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/I4
+    SLICE_X110Y94        LUT5 (Prop_lut5_I4_O)        0.124     8.194 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/O
+                         net (fo=1, routed)           0.743     8.937    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6_n_0
+    SLICE_X108Y96                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/I1
+    SLICE_X108Y96        LUT6 (Prop_lut6_I1_O)        0.124     9.061 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/O
+                         net (fo=5, routed)           0.456     9.517    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[13]_1
+    SLICE_X106Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/I1
+    SLICE_X106Y95        LUT3 (Prop_lut3_I1_O)        0.124     9.641 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/O
+                         net (fo=7, routed)           0.985    10.626    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3_n_0
+    SLICE_X107Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/I5
+    SLICE_X107Y93        LUT6 (Prop_lut6_I5_O)        0.124    10.750 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/O
+                         net (fo=1, routed)           0.721    11.471    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3_n_0
+    SLICE_X109Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/I2
+    SLICE_X109Y95        LUT6 (Prop_lut6_I2_O)        0.124    11.595 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/O
+                         net (fo=5, routed)           0.706    12.301    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/ex_rb_mxd__7[3]
+    SLICE_X109Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/I5
+    SLICE_X109Y93        LUT6 (Prop_lut6_I5_O)        0.124    12.425 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/O
+                         net (fo=2, routed)           0.651    13.075    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6_n_0
+    SLICE_X109Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/I1
+    SLICE_X109Y94        LUT6 (Prop_lut6_I1_O)        0.124    13.199 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/O
+                         net (fo=1, routed)           0.316    13.515    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7_n_0
+    SLICE_X111Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/I4
+    SLICE_X111Y93        LUT6 (Prop_lut6_I4_O)        0.124    13.639 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/O
+                         net (fo=4, routed)           0.461    14.100    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_din1__1
+    SLICE_X113Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/I4
+    SLICE_X113Y93        LUT6 (Prop_lut6_I4_O)        0.124    14.224 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/O
+                         net (fo=1, routed)           0.190    14.414    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[13]_u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_3_0
+    SLICE_X112Y93        SRL16E                                       r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     8.000     8.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.122    14.122    <hidden>
+                         clock pessimism              0.355    14.477    <hidden>
+                         clock uncertainty           -0.035    14.442    <hidden>
+    SLICE_X112Y93        SRL16E (Setup_srl16e_CLK_D)
+                                                     -0.019    14.423    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2
+  -------------------------------------------------------------------
+                         required time                         14.423    <hidden>
+                         arrival time                         -14.414    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.009    <hidden>
+
+Slack (MET) :             0.103ns  (required time - arrival time)
+  Source:                 u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[19]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_srlopt/D
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sysclk rise@8.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        7.938ns  (logic 1.696ns (21.367%)  route 6.242ns (78.633%))
+  Logic Levels:           10  (LUT3=2 LUT5=1 LUT6=7)
+  Clock Path Skew:        0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.119ns = ( 14.119 - 8.000 ) 
+    Source Clock Delay      (SCD):    6.431ns
+    Clock Pessimism Removal (CPR):    0.355ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.431     6.431    <hidden>
+    SLICE_X106Y96        FDRE                         0.000     6.431 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+    SLICE_X106Y96        FDRE (Prop_fdre_C_Q)         0.456     6.887 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/Q
+                         net (fo=1, routed)           0.582     7.469    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/p_0_in30_in_repN
+    SLICE_X109Y97                                                     f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/I0
+    SLICE_X109Y97        LUT3 (Prop_lut3_I0_O)        0.124     7.593 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/O
+                         net (fo=2, routed)           0.477     8.070    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23_n_0
+    SLICE_X110Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/I4
+    SLICE_X110Y94        LUT5 (Prop_lut5_I4_O)        0.124     8.194 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/O
+                         net (fo=1, routed)           0.743     8.937    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6_n_0
+    SLICE_X108Y96                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/I1
+    SLICE_X108Y96        LUT6 (Prop_lut6_I1_O)        0.124     9.061 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/O
+                         net (fo=5, routed)           0.456     9.517    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[13]_1
+    SLICE_X106Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/I1
+    SLICE_X106Y95        LUT3 (Prop_lut3_I1_O)        0.124     9.641 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/O
+                         net (fo=7, routed)           0.985    10.626    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3_n_0
+    SLICE_X107Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/I5
+    SLICE_X107Y93        LUT6 (Prop_lut6_I5_O)        0.124    10.750 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/O
+                         net (fo=1, routed)           0.721    11.471    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3_n_0
+    SLICE_X109Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/I2
+    SLICE_X109Y95        LUT6 (Prop_lut6_I2_O)        0.124    11.595 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/O
+                         net (fo=5, routed)           0.706    12.301    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/ex_rb_mxd__7[3]
+    SLICE_X109Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/I5
+    SLICE_X109Y93        LUT6 (Prop_lut6_I5_O)        0.124    12.425 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/O
+                         net (fo=2, routed)           0.651    13.075    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6_n_0
+    SLICE_X109Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/I1
+    SLICE_X109Y94        LUT6 (Prop_lut6_I1_O)        0.124    13.199 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/O
+                         net (fo=1, routed)           0.316    13.515    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7_n_0
+    SLICE_X111Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/I4
+    SLICE_X111Y93        LUT6 (Prop_lut6_I4_O)        0.124    13.639 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/O
+                         net (fo=4, routed)           0.605    14.244    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_din1__1
+    SLICE_X109Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[19]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/I4
+    SLICE_X109Y95        LUT6 (Prop_lut6_I4_O)        0.124    14.368 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[19]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/O
+                         net (fo=1, routed)           0.000    14.368    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[15]_u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_3_0
+    SLICE_X109Y95        FDRE                                         r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[19]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_srlopt/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     8.000     8.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.119    14.119    <hidden>
+                         clock pessimism              0.355    14.474    <hidden>
+                         clock uncertainty           -0.035    14.439    <hidden>
+    SLICE_X109Y95        FDRE (Setup_fdre_C_D)        0.032    14.471    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[19]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_srlopt
+  -------------------------------------------------------------------
+                         required time                         14.471    <hidden>
+                         arrival time                         -14.368    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.103    <hidden>
+
+Slack (MET) :             0.278ns  (required time - arrival time)
+  Source:                 u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            u_soc/i_fazyrv_core/i_fazyrv_regfile/rd_r_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sysclk rise@8.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        7.987ns  (logic 1.820ns (22.786%)  route 6.167ns (77.214%))
+  Logic Levels:           11  (LUT2=1 LUT5=1 LUT6=9)
+  Clock Path Skew:        0.270ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.122ns = ( 14.122 - 8.000 ) 
+    Source Clock Delay      (SCD):    6.185ns
+    Clock Pessimism Removal (CPR):    0.332ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.185     6.185    <hidden>
+    SLICE_X106Y98        FDRE                         0.000     6.185 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[4]/C
+    SLICE_X106Y98        FDRE (Prop_fdre_C_Q)         0.456     6.641 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[4]/Q
+                         net (fo=26, routed)          0.754     7.394    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/p_0_in19_in
+    SLICE_X107Y98                                                     f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/FSM_onehot_state_r[4]_i_2/I0
+    SLICE_X107Y98        LUT6 (Prop_lut6_I0_O)        0.124     7.518 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/FSM_onehot_state_r[4]_i_2/O
+                         net (fo=30, routed)          0.578     8.096    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_a/id_instr_ld
+    SLICE_X107Y96                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_a/repl_r_i_10/I1
+    SLICE_X107Y96        LUT2 (Prop_lut2_I1_O)        0.124     8.220 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_a/repl_r_i_10/O
+                         net (fo=9, routed)           0.686     8.907    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/shamt_mxd_masks__1[0]
+    SLICE_X109Y96                                                     f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_18/I4
+    SLICE_X109Y96        LUT6 (Prop_lut6_I4_O)        0.124     9.031 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_18/O
+                         net (fo=1, routed)           0.296     9.327    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_18_n_0
+    SLICE_X109Y97                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_13/I5
+    SLICE_X109Y97        LUT6 (Prop_lut6_I5_O)        0.124     9.451 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_13/O
+                         net (fo=3, routed)           0.684    10.135    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/ser__3[0]
+    SLICE_X108Y96                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/repl_r_i_7/I0
+    SLICE_X108Y96        LUT6 (Prop_lut6_I0_O)        0.124    10.259 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/repl_r_i_7/O
+                         net (fo=5, routed)           0.649    10.908    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/repl_r_reg_1
+    SLICE_X108Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r[32]_i_6/I1
+    SLICE_X108Y94        LUT6 (Prop_lut6_I1_O)        0.124    11.032 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r[32]_i_6/O
+                         net (fo=1, routed)           0.343    11.376    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r[32]_i_6_n_0
+    SLICE_X109Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r[32]_i_2/I1
+    SLICE_X109Y94        LUT6 (Prop_lut6_I1_O)        0.124    11.500 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r[32]_i_2/O
+                         net (fo=5, routed)           0.771    12.270    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_fazyrv_alu/rs_b__3[0]
+    SLICE_X108Y92                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_8/I1
+    SLICE_X108Y92        LUT5 (Prop_lut5_I1_O)        0.124    12.394 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_8/O
+                         net (fo=1, routed)           0.495    12.889    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_8_n_0
+    SLICE_X109Y92                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_4/I0
+    SLICE_X109Y92        LUT6 (Prop_lut6_I0_O)        0.124    13.013 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_4/O
+                         net (fo=2, routed)           0.564    13.577    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_fazyrv_alu/lo
+    SLICE_X111Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_1/I2
+    SLICE_X111Y94        LUT6 (Prop_lut6_I2_O)        0.124    13.701 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_1/O
+                         net (fo=2, routed)           0.347    14.048    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/ex_cmp_tmp
+    SLICE_X110Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/rd_r[28]_i_1/I3
+    SLICE_X110Y94        LUT6 (Prop_lut6_I3_O)        0.124    14.172 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/rd_r[28]_i_1/O
+                         net (fo=1, routed)           0.000    14.172    u_soc/i_fazyrv_core/i_fazyrv_regfile/D[0]
+    SLICE_X110Y94        FDRE                                         r  u_soc/i_fazyrv_core/i_fazyrv_regfile/rd_r_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     8.000     8.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.122    14.122    <hidden>
+                         clock pessimism              0.332    14.454    <hidden>
+                         clock uncertainty           -0.035    14.419    <hidden>
+    SLICE_X110Y94        FDRE (Setup_fdre_C_D)        0.031    14.450    u_soc/i_fazyrv_core/i_fazyrv_regfile/rd_r_reg[28]
+  -------------------------------------------------------------------
+                         required time                         14.450    <hidden>
+                         arrival time                         -14.172    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.278    <hidden>
+
+Slack (MET) :             0.370ns  (required time - arrival time)
+  Source:                 u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[18]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_srlopt/D
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sysclk rise@8.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        7.669ns  (logic 1.696ns (22.115%)  route 5.973ns (77.885%))
+  Logic Levels:           10  (LUT3=2 LUT5=1 LUT6=7)
+  Clock Path Skew:        0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.119ns = ( 14.119 - 8.000 ) 
+    Source Clock Delay      (SCD):    6.431ns
+    Clock Pessimism Removal (CPR):    0.355ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.431     6.431    <hidden>
+    SLICE_X106Y96        FDRE                         0.000     6.431 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+    SLICE_X106Y96        FDRE (Prop_fdre_C_Q)         0.456     6.887 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/Q
+                         net (fo=1, routed)           0.582     7.469    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/p_0_in30_in_repN
+    SLICE_X109Y97                                                     f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/I0
+    SLICE_X109Y97        LUT3 (Prop_lut3_I0_O)        0.124     7.593 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/O
+                         net (fo=2, routed)           0.477     8.070    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23_n_0
+    SLICE_X110Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/I4
+    SLICE_X110Y94        LUT5 (Prop_lut5_I4_O)        0.124     8.194 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/O
+                         net (fo=1, routed)           0.743     8.937    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6_n_0
+    SLICE_X108Y96                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/I1
+    SLICE_X108Y96        LUT6 (Prop_lut6_I1_O)        0.124     9.061 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/O
+                         net (fo=5, routed)           0.456     9.517    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[13]_1
+    SLICE_X106Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/I1
+    SLICE_X106Y95        LUT3 (Prop_lut3_I1_O)        0.124     9.641 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/O
+                         net (fo=7, routed)           0.985    10.626    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3_n_0
+    SLICE_X107Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/I5
+    SLICE_X107Y93        LUT6 (Prop_lut6_I5_O)        0.124    10.750 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/O
+                         net (fo=1, routed)           0.721    11.471    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3_n_0
+    SLICE_X109Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/I2
+    SLICE_X109Y95        LUT6 (Prop_lut6_I2_O)        0.124    11.595 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/O
+                         net (fo=5, routed)           0.706    12.301    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/ex_rb_mxd__7[3]
+    SLICE_X109Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/I5
+    SLICE_X109Y93        LUT6 (Prop_lut6_I5_O)        0.124    12.425 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/O
+                         net (fo=2, routed)           0.651    13.075    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6_n_0
+    SLICE_X109Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/I1
+    SLICE_X109Y94        LUT6 (Prop_lut6_I1_O)        0.124    13.199 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/O
+                         net (fo=1, routed)           0.316    13.515    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7_n_0
+    SLICE_X111Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/I4
+    SLICE_X111Y93        LUT6 (Prop_lut6_I4_O)        0.124    13.639 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/O
+                         net (fo=4, routed)           0.336    13.976    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_din1__1
+    SLICE_X109Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[18]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/I4
+    SLICE_X109Y93        LUT6 (Prop_lut6_I4_O)        0.124    14.100 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[18]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/O
+                         net (fo=1, routed)           0.000    14.100    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[14]_u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_3_0
+    SLICE_X109Y93        FDRE                                         r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[18]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_srlopt/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     8.000     8.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.119    14.119    <hidden>
+                         clock pessimism              0.355    14.474    <hidden>
+                         clock uncertainty           -0.035    14.439    <hidden>
+    SLICE_X109Y93        FDRE (Setup_fdre_C_D)        0.031    14.470    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[18]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_srlopt
+  -------------------------------------------------------------------
+                         required time                         14.470    <hidden>
+                         arrival time                         -14.100    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.370    <hidden>
+
+Slack (MET) :             0.390ns  (required time - arrival time)
+  Source:                 u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sysclk rise@8.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        7.653ns  (logic 1.696ns (22.162%)  route 5.957ns (77.838%))
+  Logic Levels:           10  (LUT3=2 LUT5=1 LUT6=7)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.122ns = ( 14.122 - 8.000 ) 
+    Source Clock Delay      (SCD):    6.431ns
+    Clock Pessimism Removal (CPR):    0.355ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.431     6.431    <hidden>
+    SLICE_X106Y96        FDRE                         0.000     6.431 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/C
+    SLICE_X106Y96        FDRE (Prop_fdre_C_Q)         0.456     6.887 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[6]_replica/Q
+                         net (fo=1, routed)           0.582     7.469    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/p_0_in30_in_repN
+    SLICE_X109Y97                                                     f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/I0
+    SLICE_X109Y97        LUT3 (Prop_lut3_I0_O)        0.124     7.593 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23/O
+                         net (fo=2, routed)           0.477     8.070    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_23_n_0
+    SLICE_X110Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/I4
+    SLICE_X110Y94        LUT5 (Prop_lut5_I4_O)        0.124     8.194 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6/O
+                         net (fo=1, routed)           0.743     8.937    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_6_n_0
+    SLICE_X108Y96                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/I1
+    SLICE_X108Y96        LUT6 (Prop_lut6_I1_O)        0.124     9.061 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_5/O
+                         net (fo=5, routed)           0.456     9.517    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[13]_1
+    SLICE_X106Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/I1
+    SLICE_X106Y95        LUT3 (Prop_lut3_I1_O)        0.124     9.641 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3/O
+                         net (fo=7, routed)           0.985    10.626    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[14]_srl5_i_3_n_0
+    SLICE_X107Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/I5
+    SLICE_X107Y93        LUT6 (Prop_lut6_I5_O)        0.124    10.750 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3/O
+                         net (fo=1, routed)           0.721    11.471    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_3_n_0
+    SLICE_X109Y95                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/I2
+    SLICE_X109Y95        LUT6 (Prop_lut6_I2_O)        0.124    11.595 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/reg_r_reg[15]_srl5_i_2/O
+                         net (fo=5, routed)           0.706    12.301    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/ex_rb_mxd__7[3]
+    SLICE_X109Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/I5
+    SLICE_X109Y93        LUT6 (Prop_lut6_I5_O)        0.124    12.425 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6/O
+                         net (fo=2, routed)           0.651    13.075    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_6_n_0
+    SLICE_X109Y94                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/I1
+    SLICE_X109Y94        LUT6 (Prop_lut6_I1_O)        0.124    13.199 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/O
+                         net (fo=1, routed)           0.316    13.515    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7_n_0
+    SLICE_X111Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/I4
+    SLICE_X111Y93        LUT6 (Prop_lut6_I4_O)        0.124    13.639 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/O
+                         net (fo=4, routed)           0.320    13.959    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_din1__1
+    SLICE_X113Y93                                                     r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_2/I4
+    SLICE_X113Y93        LUT6 (Prop_lut6_I4_O)        0.124    14.083 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_2/O
+                         net (fo=1, routed)           0.000    14.083    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/D[0]
+    SLICE_X113Y93        FDRE                                         r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     8.000     8.000 r  <hidden>
+                         propagated clock network latency
+                                                      6.122    14.122    <hidden>
+                         clock pessimism              0.355    14.477    <hidden>
+                         clock uncertainty           -0.035    14.442    <hidden>
+    SLICE_X113Y93        FDRE (Setup_fdre_C_D)        0.031    14.473    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[28]
+  -------------------------------------------------------------------
+                         required time                         14.473    <hidden>
+                         arrival time                         -14.083    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.390    <hidden>
+
+
+
+

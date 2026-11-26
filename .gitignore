@@ -1,0 +1,20 @@
+# Vivado projects and simulator runs are rebuilt by the scripts
+vivado/
+sim/run_*/
+sim/power_*/
+.Xil/
+*.jou
+*.str
+*.log
+!results/*/read_saif.log
+# firmware build products (fw/firmware.mem is kept)
+fw/*.elf
+fw/*.bin
+fw/*.map
+fw/*.lst
+fw/firmware_sim.mem
+# Python and Word temporary files
+__pycache__/
+~$*
+# chart output of report/make_sleep_charts.py
+report/figures/

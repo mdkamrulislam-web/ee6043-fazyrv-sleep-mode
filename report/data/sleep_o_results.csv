@@ -1,0 +1,6 @@
+quantity,value,unit
+"busy-wait LED program, dynamic power",11.0,mW
+sleep design awake (clock on),8.0,mW
+sleep design asleep (clock off),2.0,mW
+fraction of time awake,0.001099393972708862,
+sleep design average dynamic power,2.007,mW

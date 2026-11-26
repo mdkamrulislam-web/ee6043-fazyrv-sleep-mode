@@ -1,0 +1,3 @@
+[submodule "fazyrv"]
+	path = fazyrv
+	url = https://github.com/meiniKi/FazyRV.git

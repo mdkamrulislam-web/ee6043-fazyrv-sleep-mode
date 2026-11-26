@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Nov 19 21:20:08 2026
+| Host         : DESKTOP-HODVNLJ running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file C:/Users/THINKPAD/repos/ee6043-fazyrv-lowpower/results/base/utilization_hier.rpt
+| Design       : top_pynqz2
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------+---------------+------------+------------+---------+------+-----+--------+--------+------------+
+|         Instance        |     Module    | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------+---------------+------------+------------+---------+------+-----+--------+--------+------------+
+| top_pynqz2              |         (top) |        387 |        380 |       0 |    7 | 269 |      1 |      1 |          0 |
+|   (top_pynqz2)          |         (top) |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|   u_soc                 |          fsoc |        382 |        375 |       0 |    7 | 262 |      1 |      1 |          0 |
+|     i_fazyrv_core       |    fazyrv_top |        332 |        325 |       0 |    7 | 257 |      0 |      1 |          0 |
+|       i_fazyrv_core     |   fazyrv_core |        267 |        260 |       0 |    7 | 159 |      0 |      0 |          0 |
+|         i_fazyrv_cntrl  |  fazyrv_cntrl |         69 |         69 |       0 |    0 |  11 |      0 |      0 |          0 |
+|         i_fazyrv_decode | fazyrv_decode |        145 |        145 |       0 |    0 |  60 |      0 |      0 |          0 |
+|       i_fazyrv_regfile  |     fazyrv_rf |         65 |         65 |       0 |    0 |  98 |      0 |      0 |          0 |
+|     i_mem               |        wb_ram |         51 |         51 |       0 |    0 |   1 |      1 |      0 |          0 |
++-------------------------+---------------+------------+------------+---------+------+-----+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

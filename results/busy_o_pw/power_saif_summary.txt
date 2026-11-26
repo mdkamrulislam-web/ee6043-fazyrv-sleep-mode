@@ -1,0 +1,6 @@
+run=busy_o_pw power_total_w=0.118 power_dynamic_w=0.011 power_static_w=0.106 confidence=High
+  Clocks_w=
+  Slice_Logic_w=
+  Signals_w=
+  Block_RAM_w=
+  I/O_w=

@@ -1,0 +1,38 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Fri Nov 20 16:24:29 2026
+| Host         : DESKTOP-HODVNLJ running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file C:/Users/THINKPAD/repos/ee6043-fazyrv-sleep/results/sleep_o_board/utilization_hier.rpt
+| Design       : top_pynqz2
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------+---------------+------------+------------+---------+------+-----+--------+--------+------------+
+|         Instance        |     Module    | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------+---------------+------------+------------+---------+------+-----+--------+--------+------------+
+| top_pynqz2              |         (top) |        564 |        558 |       0 |    6 | 320 |      1 |      1 |          0 |
+|   (top_pynqz2)          |         (top) |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|   u_sleep               |    sleep_ctrl |         73 |         73 |       0 |    0 |  34 |      0 |      0 |          0 |
+|   u_soc                 |    fsoc_sleep |        486 |        480 |       0 |    6 | 279 |      1 |      1 |          0 |
+|     i_fazyrv_core       |    fazyrv_top |        440 |        434 |       0 |    6 | 274 |      0 |      1 |          0 |
+|       i_fazyrv_core     |   fazyrv_core |        373 |        367 |       0 |    6 | 176 |      0 |      0 |          0 |
+|         i_fazyrv_decode | fazyrv_decode |        207 |        207 |       0 |    0 |  72 |      0 |      0 |          0 |
+|         i_fazyrv_spm_a  |  fazyrv_spm_a |         54 |         50 |       0 |    4 |  18 |      0 |      0 |          0 |
+|         i_fazyrv_spm_d  |  fazyrv_spm_d |         61 |         61 |       0 |    0 |  41 |      0 |      0 |          0 |
+|       i_fazyrv_regfile  |     fazyrv_rf |         68 |         68 |       0 |    0 |  98 |      0 |      0 |          0 |
++-------------------------+---------------+------------+------------+---------+------+-----+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

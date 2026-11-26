@@ -1,0 +1,6 @@
+run=base power_total_w=0.114 power_dynamic_w=0.012 power_static_w=0.103 confidence=High
+  Clocks_w=
+  Slice_Logic_w=
+  Signals_w=
+  Block_RAM_w=
+  I/O_w=

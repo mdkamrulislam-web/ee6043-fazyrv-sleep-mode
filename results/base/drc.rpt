@@ -1,0 +1,57 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Nov 19 21:20:11 2026
+| Host         : DESKTOP-HODVNLJ running 64-bit major release  (build 9200)
+| Command      : report_drc -file C:/Users/THINKPAD/repos/ee6043-fazyrv-lowpower/results/base/drc.rpt
+| Design       : top_pynqz2
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: impl_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 4
++-------------+----------+---------------------------------+--------+
+| Rule        | Severity | Description                     | Checks |
++-------------+----------+---------------------------------+--------+
+| PLBUFGOPT-1 | Warning  | Non-Optimal connections to BUFG | 3      |
+| ZPS7-1      | Warning  | PS7 block required              | 1      |
++-------------+----------+---------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+PLBUFGOPT-1#1 Warning
+Non-Optimal connections to BUFG  
+A non-muxed BUFG sysclk_IBUF_BUFG_inst is driven by another global buffer sysclk_IBUF_BUFG_inst_replica. Remove non-muxed BUFG if it is not desired
+Related violations: <none>
+
+PLBUFGOPT-1#2 Warning
+Non-Optimal connections to BUFG  
+A non-muxed BUFG sysclk_IBUF_BUFG_inst_replica is driven by another global buffer sysclk_IBUF_BUFG_inst_replica_1. Remove non-muxed BUFG if it is not desired
+Related violations: <none>
+
+PLBUFGOPT-1#3 Warning
+Non-Optimal connections to BUFG  
+A non-muxed BUFG sysclk_IBUF_BUFG_inst_replica_1 is driven by another global buffer sysclk_IBUF_BUFG_inst_replica_2. Remove non-muxed BUFG if it is not desired
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

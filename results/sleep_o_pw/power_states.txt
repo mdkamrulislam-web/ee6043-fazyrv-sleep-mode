@@ -1,0 +1,3 @@
+gating buffer u_bufgce, enable pin u_bufgce/CE0, net clk_en (SAIF name clk_en), pin inverted=1, net high fraction=0.9989006060272911
+f_awake=0.001099393972708862 dynamic_awake_w=0.008 dynamic_asleep_w=0.002
+dynamic_average_w=0.002006596363836253

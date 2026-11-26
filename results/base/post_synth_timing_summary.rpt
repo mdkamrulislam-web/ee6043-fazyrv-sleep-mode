@@ -1,0 +1,349 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Nov 19 21:16:34 2026
+| Host         : DESKTOP-HODVNLJ running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file C:/Users/THINKPAD/repos/ee6043-fazyrv-lowpower/results/base/post_synth_timing_summary.rpt
+| Design       : top_pynqz2
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2)
+6. checking no_output_delay (4)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 2 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (4)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 4 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -2.564      -27.535                     17                  652        0.045        0.000                      0                  652        3.020        0.000                       0                   272  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+sysclk  {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sysclk             -2.564      -27.535                     17                  652        0.045        0.000                      0                  652        3.020        0.000                       0                   272  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sysclk
+  To Clock:  sysclk
+
+Setup :           17  Failing Endpoints,  Worst Slack       -2.564ns,  Total Violation      -27.535ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.045ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.020ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -2.564ns  (required time - arrival time)
+  Source:                 u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/D
+                            (rising edge-triggered cell SRL16E clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sysclk rise@8.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        10.340ns  (logic 2.013ns (19.468%)  route 8.327ns (80.532%))
+  Logic Levels:           11  (LUT4=1 LUT5=1 LUT6=9)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.670ns = ( 10.670 - 8.000 ) 
+    Source Clock Delay      (SCD):    2.935ns
+    Clock Pessimism Removal (CPR):    0.120ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  sysclk
+                         net (fo=0)                   0.000     0.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  sysclk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     2.250    sysclk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.101     2.351 r  sysclk_IBUF_BUFG_inst/O
+                         net (fo=271, unplaced)       0.584     2.935    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/sysclk_IBUF_BUFG
+                         FDRE                                         r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.478     3.413 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_r_reg[4]/Q
+                         net (fo=26, unplaced)        1.031     4.444    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/p_0_in19_in
+                         LUT6 (Prop_lut6_I0_O)        0.295     4.739 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/FSM_onehot_state_r[4]_i_2/O
+                         net (fo=30, unplaced)        0.519     5.258    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_a/id_instr_ld
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.382 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_a/reg_r[34]_i_24/O
+                         net (fo=7, unplaced)         0.484     5.866    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/shft_tap_pos__7[1]
+                         LUT6 (Prop_lut6_I4_O)        0.124     5.990 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_17/O
+                         net (fo=2, unplaced)         0.913     6.903    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/reg_r[32]_i_17_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.027 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/repl_r_i_8/O
+                         net (fo=2, unplaced)         0.913     7.940    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/ser__3[1]
+                         LUT6 (Prop_lut6_I1_O)        0.124     8.064 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_spm_d/repl_r_i_7/O
+                         net (fo=5, unplaced)         0.930     8.994    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/repl_r_reg_1
+                         LUT6 (Prop_lut6_I1_O)        0.124     9.118 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_21/O
+                         net (fo=2, unplaced)         0.913    10.031    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_21_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    10.155 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/cmp_r_i_16/O
+                         net (fo=3, unplaced)         0.920    11.075    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/i_fazyrv_alu/rs_a__3[1]
+                         LUT5 (Prop_lut5_I1_O)        0.124    11.199 f  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_9/O
+                         net (fo=1, unplaced)         0.449    11.648    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_9_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    11.772 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7/O
+                         net (fo=1, unplaced)         0.449    12.221    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_7_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    12.345 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r[28]_i_5/O
+                         net (fo=4, unplaced)         0.473    12.818    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_din1__1
+                         LUT6 (Prop_lut6_I4_O)        0.124    12.942 r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_decode/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2_i_1/O
+                         net (fo=1, unplaced)         0.333    13.275    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[13]_u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_3_0
+                         SRL16E                                       r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     8.000     8.000 r  <hidden>
+    H16                                               0.000     8.000 r  sysclk
+                         net (fo=0)                   0.000     8.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         1.380     9.380 r  sysclk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    10.140    sysclk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    10.231 r  sysclk_IBUF_BUFG_inst/O
+                         net (fo=271, unplaced)       0.439    10.670    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/sysclk_IBUF_BUFG
+                         SRL16E                                       r  u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/CLK
+                         clock pessimism              0.120    10.790    <hidden>
+                         clock uncertainty           -0.035    10.755    <hidden>
+                         SRL16E (Setup_srl16e_CLK_D)
+                                                     -0.044    10.711    u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2
+  -------------------------------------------------------------------
+                         required time                         10.711    <hidden>
+                         arrival time                         -13.275    <hidden>
+  -------------------------------------------------------------------
+                         slack                                 -2.564    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.045ns  (arrival time - required time)
+  Source:                 sw_sync_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sw_sync_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sysclk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sysclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk rise@0.000ns - sysclk rise@0.000ns)
+  Data Path Delay:        0.228ns  (logic 0.147ns (64.493%)  route 0.081ns (35.507%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.049ns
+    Source Clock Delay      (SCD):    0.696ns
+    Clock Pessimism Removal (CPR):    0.208ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  sysclk
+                         net (fo=0)                   0.000     0.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  sysclk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.337     0.556    sysclk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.582 r  sysclk_IBUF_BUFG_inst/O
+                         net (fo=271, unplaced)       0.114     0.696    sysclk_IBUF_BUFG
+                         FDRE                                         r  sw_sync_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.147     0.843 r  sw_sync_reg[0]/Q
+                         net (fo=1, unplaced)         0.081     0.924    sw_sync[0]
+                         FDRE                                         r  sw_sync_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk rise edge)     0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  sysclk
+                         net (fo=0)                   0.000     0.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  sysclk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.355     0.761    sysclk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.790 r  sysclk_IBUF_BUFG_inst/O
+                         net (fo=271, unplaced)       0.259     1.049    sysclk_IBUF_BUFG
+                         FDRE                                         r  sw_sync_reg[1]/C
+                         clock pessimism             -0.208     0.841    <hidden>
+                         FDRE (Hold_fdre_C_D)         0.038     0.879    sw_sync_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.879    <hidden>
+                         arrival time                           0.924    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.045    <hidden>
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sysclk
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { sysclk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         8.000       5.056                u_soc/i_fazyrv_core/i_bram_sp/ram_r_reg/CLKARDCLK
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980         4.000       3.020                u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/CLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980         4.000       3.020                u_soc/i_fazyrv_core/i_fazyrv_core/i_fazyrv_pc/pc_r_reg[17]_srl4___u_soc_i_fazyrv_core_i_fazyrv_core_i_fazyrv_pc_pc_r_reg_r_2/CLK
+
+
+
